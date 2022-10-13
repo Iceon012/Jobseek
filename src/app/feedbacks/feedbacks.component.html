@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 style="font-weight: 700; text-transform: uppercase;"><i class="fa fa-commenting" aria-hidden="true"></i> FEEDBACKS</h1>
+    <br>
+    <div class="card">
+        <h3 class="card-header text-light bg-dark"></h3>
+        <div class="row">
+            <div class="col-md">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Messages:</b></h4>
+                    <p *ngFor="let f of feed" class="card-text text-left"><i class="fa fa-user-circle" aria-hidden="true"></i><b> {{f.seek_name}}</b> : {{f.feeBack_msg}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
+    <div class="form-group">
+        <h1>
+            <i class="fa fa-comments" aria-hidden="true"></i>
+        </h1>
+        <select multiple class="form-control">
+          <option *ngFor="let f of feed"><b>From: </b>{{f.Message}}</option>
+        </select>
+      </div>
+</div> -->

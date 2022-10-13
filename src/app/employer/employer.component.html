@@ -1,0 +1,154 @@
+<div class="container-fluid bg-dark">
+  sample
+  </div>
+  <br>
+  <div class="container">
+    <p class="text-left display-5"><i class="fa fa-search fa-md" aria-hidden="true"></i> JOBSEEK.COM</p>
+    <hr>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="card">
+          <!-- <h1 class="card-header" *ngFor="let u of user">Hello! {{u.name}}</h1> -->
+          <div class="card-body" *ngFor ="let emp of employerdata">
+            <h5><b>EMPLOYER ID: </b>{{emp.id_no}}</h5>
+            <h1 class="card-title">Welcome! {{emp.lname}}, {{emp.fname}}</h1>
+            <p class="card-text"><i>{{emp.address}}</i></p>
+            <button class="btn btn-outline-dark">See Profile</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+          <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link"><i class="fa fa-users" aria-hidden="true"></i> Applicants</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login"><i class="fa fa-sign-out" aria-hidden="true"> Signout</i></a>
+          </li> 
+          </ul>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#uploadjobs" ><i class="fa fa-plus-circle" aria-hidden="true"></i> ADD JOB</button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg col-md-10 ml-auto mr-auto">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th class="text-center">Job ID</th>
+                <th>Job Title</th>
+                <th>Job Type</th>
+                <th>Job Level</th>
+                <th>Job Salary</th>
+                <th>Job Description</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="justify-content-md-center">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="text-center">
+                  <div>
+                    <a ><i
+                        class="fa fa-edit fa-lg" aria-hidden="true"></i></a>
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal3" type="button"><i class="fa fa-trash fa-lg" aria-hidden="true"
+                      style="margin-left: 15px;"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="uploadjobs" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; padding-left: 12rem;"><i class="fa fa-plus" aria-hidden="true"></i><b> ADD JOB</b></h3>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+          <div class="container">
+          <form [formGroup]="jobForm" (ngSubmit)="SaveJobs()">
+            <div class="row">
+              <div class="col-md text-center">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" formControlName="empid" id="floatingInput" *ngFor ="let emp of employerdata" value="{{emp.id_no}}">
+                  <label for="floatingInput">EMPLOYER ID:</label>
+                </div>
+              </div>
+              <br>
+              <br>
+            </div>
+            <div class="row">
+              <div class="col-md">
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" formControlName="jTitle" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 70px"></textarea>
+                  <label for="floatingTextarea2">Job Title</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md">
+              <select class="form-select mb-3 rounded-4" aria-label="Default select example" formControlName="jType">
+                <option *ngFor="let titem of jobType">{{titem}}</option>
+              </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md">
+              <select class="form-select mb-3 rounded-4" aria-label="Default select example" formControlName="jcat">
+                <option *ngFor="let titem of jobCategory">{{titem}}</option>
+              </select>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" formControlName="jSalary" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Job Salary ($20,000)</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md">
+              <div class="form-floating mb-3">
+                <textarea class="form-control" formControlName="jobDesc" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Job Description</label>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4">
+          <!-- <div class="alert alert-success" *ngIf="divshowsuccess">
+            <h3><b>Successfull</b> 
+              <p>You Successfully Register!</p>
+            </h3>
+          </div> -->
+          <div class="row">
+            <div class="col-md">
+              <button type="submit" class="btn btn-outline-primary btn-md form-control">ADD JOB</button>
+            </div>
+            <div class="col-md-3">
+              <button type="button" class="btn btn-outline-danger btn-md form-control" data-bs-dismiss="modal">CLOSE</button>
+            </div>
+          </div>

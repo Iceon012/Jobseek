@@ -1,0 +1,395 @@
+<div class="container">
+  <div>
+    <p></p>
+  </div>
+</div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg shadow fixed-top" style="background-color: #1a1818;">
+    <div class="container">
+      <i class="fa fa-search text-white fa-lg" aria-hidden="true"></i>
+      <a id="brand" class="navbar-brand" href="#">Jobseek.com</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active">
+            <a class="nav-link " href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Jobs" routerLink="home/update">View Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#Login">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Full Page Image Header with Vertically Centered Content -->
+  <!-- <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center">
+          <h1 class="fw-light display-3">Hello! Jobseeker</h1>
+          <p class="lead">in this website you can see Jobs that related to your career.</p>
+        </div>
+      </div>
+    </div>
+  </header> -->
+  <div class="container px-4 px-lg-5" style="padding-top: 8rem;">
+    <div class="row">
+      <ul class="list-group col-md-3">
+        <li class="list-group-item btn btn-primar justify-content-md-center">
+            <div class="fw-bold">
+            <h3>
+              Latest Jobs
+            </h3>
+            </div>
+        </li>
+      </ul>
+      <form class="col-sm d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+    <br>
+    <div class="row">
+      <ul class="list-group col-md-3">
+        <div class="card" aria-hidden="true">
+          <!-- <img src="assets/Banner.jpg" class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+          </div>
+        </div>
+        <div class="card" aria-hidden="true">
+          <!-- <img src="assets/Banner.jpg" class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Page Content -->
+  <section class="py-5" style="padding-top: 3rem;">
+    <div class="container px-4 px-lg-5">
+        <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 border-3 mb-lg-0" src="assets/Job.jpg" alt="..." /></div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">Get Hired</h1>
+                <p >Start the job of your dreams!</p>
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#Feedback">Send Feedbacks!</button>
+            </div>
+        </div>
+        <!-- Call to Action-->
+        <div class="card text-white alert alert-primary my-5 py-4 text-center">
+            <div class="card-body"><h2 class="m-0 alert-primary">We'll send you a text and an email when jobs near you become available</h2></div>
+        </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Graphics & Design</h2>
+                        <img class="img-fluid rounded mb-4 border-3 mb-lg-0" src="assets/Job.jpg" alt="..." />
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                    </div>
+                    <div class="card-footer"><button class="btn btn-primary btn-md" href="#!">Apply</button></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Graphics & Design</h2>
+                        <img class="img-fluid rounded mb-4 border-3 mb-lg-0" src="assets/Job.jpg" alt="..." />
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                    </div>
+                    <div class="card-footer"><button class="btn btn-primary btn-md" href="#!">Apply</button></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5" href="Jobs">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Graphics & Design</h2>
+                        <img class="img-fluid rounded mb-4 border-3 mb-lg-0" src="assets/Job.jpg" alt="..." />
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                    </div>
+                    <div class="card-footer"><button class="btn btn-primary btn-md" href="#!">Apply</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+          <!-- <div class="col-lg-7"><img class="img-fluid rounded mb-4 border-3 mb-lg-0" src="assets/Banner.jpg" alt="..." /></div>
+          <div class="col-lg-5">
+            <img class="img-fluid rounded-circle mb-4 border-3 mb-lg-0" src="assets/Seek.jpg" alt="..." width="150" height="150"/>
+              <h3 class="font-weight-light">AYSON, ARVIN S.</h3>
+              <p><i>@arvin.ayson.56@yahoo.com</i></p>
+              <a class="btn btn-sm btn-outline-primary" href="https://www.facebook.com/arvin.ayson.56">CLICK ME</a>
+          </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Content-->
+<!---Modal 2-->
+<div class="modal fade" id="Feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Feedbacks</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="FeedbackForm" (ngSubmit)="SaveFeed()">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" placeholder="Optional" formControlName="feedname">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" formControlName="feedmsg"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" href="#" routerLink="/home">Send message</button>
+          <br>
+          <br>
+          <h4 *ngIf="divshowfeed" class="col-md alert alert-success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Message has been Sent!</h4>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -Modal 3
+<div class="modal fade" id="Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-md rounded-4 btn-primary" type="submit">Log in</button>
+          <small class="text-muted">By clicking Login, you agree to the terms of use.</small>
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3 text-primary">Already have an Account?</h2>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="button" data-bs-toggle="modal"
+            data-bs-target="#Signup">
+            Sign up
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="Signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-md rounded-4 btn-primary" type="submit">Log in</button>
+          <small class="text-muted">By clicking Login, you agree to the terms of use.</small>
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3 text-primary">Already have an Account?</h2>
+          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+            Sign up
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="modal fade" id="Login" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalToggleLabel"><b>Employer | Login Form</b></h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form  [formGroup]="loginForm" (ngSubmit)="loginFunct()">
+          <div class="alert alert-danger" *ngIf="divshow">
+            <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              I am sorry. </h3>
+            <p>You entered an <b>invalid email / password</b>!</p>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" formControlName="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" formControlName="pass" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-md rounded-4 btn-primary" type="submit">Log in</button>
+          <small class="text-muted">By clicking Login, you agree to the terms of use.</small>
+          <hr class="my-4">
+          <p class="fs-5 fw-bold mb-3 alert alert-primary">Already have an Account? <a data-bs-toggle="modal" href="#exampleModalToggle2" role="button"> Signup</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalToggleLabel2"><b>Employer | Signup Form</b></h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-image: url('Seek.jpg');">
+        <div class="container">
+        <form [formGroup]="signupForm" (ngSubmit)="SaveFunct()">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="form-floating mb-3">
+              <input type="email" formControlName="lastname" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Last Name</label>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="form-floating mb-3">
+              <input type="email" formControlName="firstname" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">First Name</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-floating mb-3">
+              <input type="email" formControlName="middle" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">MI.</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <div class="form-floating mb-2">
+              <input type="date" formControlName="bdate" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Birthdate</label>
+            </div>
+          </div>
+        </div>
+        <div class="row text-left" style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="col-md-8">
+            <div class="form-check form-check-inline" style="padding-left: 15px;">
+              <label class="form-check-label">Gender: </label>
+            </div>
+            <div style="padding-left: 6px;" class="form-check-inline" *ngFor="let d of Gender">
+              <input class="form-check-input" type="radio" 
+                  name="gen"
+                  value="{{d}}"
+                  formControlName="gen">
+              <label class="form-check-label" for="gen">
+                {{d}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <div class="form-floating mb-3">
+              <input type="email" formControlName="address" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">(Street, Barangay, Town, Province)</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <div class="form-floating mb-2">
+              <input type="text" formControlName="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <div class="form-floating mb-2">
+              <input type="password" formControlName="password" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Password</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <div class="form-floating mb-2">
+              <input type="number" formControlName="contact" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Contact No.:</label>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="alert alert-success" *ngIf="divshowsuccess">
+          <h3><b>Successfull</b> 
+            <p>You Successfully Register!</p>
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <button type="submit" class="btn btn-primary btn-lg form-control">Signup</button>
+          </div>
+          <div class="col-md">
+            <button type="button" class="btn btn-primary btn-lg form-control" data-bs-target="#Login" data-bs-toggle="modal">Back to Login</button>
+          </div>
+        </div>
+        <!---<div class="alert alert-success">
+          <h3><b>Successful</b></h3>
+          <p><b>|</b> Already Signup</p>
+        </div>--->
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<head>
+    <style>
+        #title {
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-dark" style="background-color: black;">
+            <div class="col-md">
+                <h4>
+                    sample
+                </h4>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md">
+            <a class="navbar-brand text-dark text-center" href="#" style="font-weight: 800; padding-left: 7rem; font-size: 25px;"><i
+                    class="fa fa-search" aria-hidden="true"></i> JOBSEEK.COM</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form [formGroup]="userloginForm" (ngSubmit)="userloginFunct()">
+                <h1 class="display-2 text-center">
+                    <i class="fa fa-user-circle"></i>
+                </h1>
+                <h3 class="h3 mb-3 fw-normal display-5 text-center">USER LOGIN</h3>
+                <div class="alert alert-danger" *ngIf="divshow">
+                    <h3><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                        I am sorry. </h3>
+                    <p>You entered an <b>invalid email / password</b>!</p>
+                </div>
+                <div class="form-floating">
+                    <input type="email" class="form-control" formControlName="email" id="floatingInput"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <hr>
+                <div class="form-floating">
+                    <input type="password" class="form-control" formControlName="pass" id="floatingPassword"
+                        placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <hr>
+                <div class="checkbox mb-3 text-left">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                    <a routerLink="/home"><i> Homepage</i></a>
+                </div>
+                <hr>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">LOGIN</button>
+                <hr>
+                <p class="text-muted text-center">&copy; 2022–2023</p>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</body>

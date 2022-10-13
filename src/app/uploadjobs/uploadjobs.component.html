@@ -1,0 +1,28 @@
+<tbody>
+    <tr *ngFor="let p of product">
+      <td>{{p.prodname}}</td>
+      <td>{{p.brand}}</td>
+      <td>{{p.pdesc}} {{p.weight}}</td>
+      <td>{{p.destination}}</td>
+      <td><i class="fa fa-pencil" aria-hidden="true" [routerLink]="['/dashboard/updateprod',p.prodnum]"></i></td>
+      <td><i class="fa fa-trash" aria-hidden="true" (click)="onConfirm(confirmModal,p.prodnum,p.prodname,p.brand)"></i></td>
+    </tr>
+  </tbody>
+
+
+
+<ng-template #confirmModal let-modal>
+    <div class="modal-header">
+       <h4 class="modal-title" id="confirm">Confirmation</h4>
+    </div>
+    <div class="modal-body">
+       <div class="alert alert-warning">
+          <h4>Your are deleting <b>{{prodbrand}} {{prodname}}</b></h4> 
+          <h4>Are you Sure?</h4> 
+       </div>
+    </div>
+    <div class="modal-footer">
+       <button type="button" class="btn btn-outline-dark" (click)="modal.close('1')">Ok</button>
+       <button type="button" class="btn btn-outline-dark" (click)="modal.close('0')">Cancel</button>
+    </div>
+ </ng-template>

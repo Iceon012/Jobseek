@@ -1,0 +1,20 @@
+span {
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+i {
+    font-weight: 900;
+
+}
+a {
+    color:#000000;
+}
+
+a:hover{
+    color: aliceblue;
+}
+li:hover {
+    background-color: #000000;
+    color: white;
+}
