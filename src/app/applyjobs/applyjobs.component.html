@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="container justify-content-md-center py-3">
+        <h1 class="display-5 text-info" href="#" style="font-weight: 800;"><i class="fa fa-user" aria-hidden="true"></i>
+            APPLICATION</h1>
+    </div>
+</div>
+
+<div class="container py-3">
+    <!-- <div class="row">
+        <div class="col-md">
+            <h4 class="alert alert-success" *ngIf="divupdate"><i class="fa fa-check-square-o" aria-hidden="true"></i> Update Successfully</h4>
+        </div>
+    </div> -->
+    <div class="row">
+    <div class="col-md">
+        <!-- <form [formGroup]="updateForm" (ngSubmit)="updateFunct()"> -->
+            <form>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-floating mb-3">
+                        <input type="email" formControlName="ulname" class="form-control rounded-4" id="floatingInput"
+                            placeholder="name@example.com">
+                        <label for="floatingInput">Last Name</label>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-floating mb-3">
+                        <input type="email" formControlName="ufirstname" class="form-control rounded-4"
+                            id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">First Name</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-floating mb-3">
+                        <input type="email" formControlName="umiddle" class="form-control rounded-4" id="floatingInput"
+                            placeholder="name@example.com">
+                        <label for="floatingInput">MI.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-floating mb-2">
+                        <input type="date" formControlName="ubdate" class="form-control rounded-4" id="floatingInput"
+                            placeholder="name@example.com" >
+                        <label for="floatingInput">Application Date</label>
+                    </div>
+                </div>
+            </div>
+            <a href=""></a>
+            <!-- <div class="row">
+                <label class="col-md-1">Gender: </label>
+                <div class="col-md-2">
+                    <div class="form-check-inline" *ngFor="let g of Gender">
+                        <input class="form-check-input" type="radio" name="ugen" value="{{g}}" [checked]="ugender==g"
+                            formControlName="ugen">
+                        <label class="form-check-label" for="ugen">
+                            {{g}}
+                        </label>
+                    </div>
+                </div>
+            </div> -->
+            <p></p>
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-floating mb-3">
+                        <input type="email" formControlName="uaddress" class="form-control rounded-4" id="floatingInput"
+                            placeholder="name@example.com">
+                        <label for="floatingInput">Address: (Street, Barangay, Town, Province)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-floating mb-2">
+                        <input type="number" formControlName="ucontact" class="form-control rounded-4"
+                            id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Contact No.:</label>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md">
+                    <button class="btn btn-info text-white form-control" type="submit" routerLink="/home/pagecontent">APPLY</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>

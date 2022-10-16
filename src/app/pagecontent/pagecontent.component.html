@@ -1,0 +1,118 @@
+  <!-- Page Content -->
+  <section class="py-5" style="padding-top: 3rem;">
+    <div class="container px-4 px-lg-5">
+        <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 border-3 mb-lg-0" src="assets/Job.jpg" alt="..." /></div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">Get Hired</h1>
+                <p >Start the job of your dreams!</p>
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#Feedback">Send Feedbacks!</button>
+            </div>
+        </div>
+        <!-- Call to Action-->
+        <div class="card text-white alert alert-primary my-5 py-4 text-center">
+            <div class="card-body"><h2 class="m-0 alert-primary">We'll send you a text and an email when jobs near you become available</h2></div>
+        </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-6 mb-5" *ngFor = "let j of posted">
+              <div class="card mb-3" style="border-radius: .5rem;">
+                <div class="row g-0">
+                  <div class="col-md-4 alert alert-primary text-center"
+                    style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                      alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                    <h5>{{j.job_title}}</h5>
+                    <p>{{j.job_description}}</p>
+                    <i class="far fa-edit mb-5"></i>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body p-4">
+                      <h6 class="alert alert-primary">Employer Information</h6>
+                      <hr class="mt-0 mb-4">
+                      <div class="row pt-1">
+                        <div class="col-6 mb-3">
+                          <h6>Email</h6>
+                          <p class="text-muted">{{j.email}}</p>
+                        </div>
+                        <div class="col-6 mb-3">
+                          <h6>Phone</h6>
+                          <p class="text-muted">{{j.contact}}</p>
+                        </div>
+                      </div>
+                      <h6 class="alert alert-primary">Job Information</h6>
+                      <hr class="mt-0 mb-4">
+                      <div class="row pt-1">
+                        <div class="col-6 mb-3">
+                          <h6>Position</h6>
+                          <p class="text-muted">{{j.job_level}}</p>
+                        </div>
+                        <div class="col-6 mb-3">
+                          <h6>Monthly Salary</h6>
+                          <p class="text-muted">&#x20B1; {{j.job_salary}}</p>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-start">
+                        <button class="btn btn-outline-primary form-control" routerLink="/home/applyjobs"><i class="fa fa-external-link" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Job Description</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" *ngFor = "let j of posted">
+       {{j.job_description}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Page Content-->
+<!---Modal 2-->
+<div class="modal fade" id="Feedback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Feedbacks</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="FeedbackForm" (ngSubmit)="SaveFeed()">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" placeholder="Optional" formControlName="feedname">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" formControlName="feedmsg"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" href="#" routerLink="/home">Send message</button>
+          <br>
+          <br>
+          <h4 *ngIf="divshowfeed" class="col-md alert alert-success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Message has been Sent!</h4>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+if (self.CavalryLogger) { CavalryLogger.start_js_script(document.currentScript); }/*FB_PKG_DELIM*/
+
+__d("LWICometEditingRootContentQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="5067217496658318"}),null);
+__d("LWICometEditingRootContentQuery$Parameters",["LWICometEditingRootContentQuery_facebookRelayOperation"],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:b("LWICometEditingRootContentQuery_facebookRelayOperation"),metadata:{},name:"LWICometEditingRootContentQuery",operationKind:"query",text:null}};e.exports=a}),null);
+__d("AdsLWICoBEditingDialog.entrypoint",["JSResourceForInteraction","LWICometEditingRootContentQuery$Parameters","WebPixelRatio"],(function(a,b,c,d,e,f,g){"use strict";a={getPreloadProps:function(a){return{queries:{editingRootQueryRef:{parameters:b("LWICometEditingRootContentQuery$Parameters"),variables:{boostID:a.boostID,scale:d("WebPixelRatio").get(),shouldFetchBrandedTemplate:!1}}}}},root:c("JSResourceForInteraction")("AdsLWICoBEditingDialog.react").__setRef("AdsLWICoBEditingDialog.entrypoint")};g["default"]=a}),98);

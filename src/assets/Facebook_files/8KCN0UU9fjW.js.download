@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js_script(document.currentScript); }/*FB_PKG_DELIM*/
+
+__d("XCometMarketplaceLiveShoppingControllerRouteBuilder",["jsRouteBuilder"],(function(a,b,c,d,e,f,g){a=c("jsRouteBuilder")("/marketplace/live-shopping/",Object.freeze({}),void 0);b=a;g["default"]=b}),98);
+__d("CometMarketplaceLiveShoppingNavigationItem.react",["fbt","ix","CometMarketplaceNavLink.react","XCometMarketplaceLiveShoppingControllerRouteBuilder","fbicon","react","useIsRouteActive"],(function(a,b,c,d,e,f,g,h,i){"use strict";var j=d("react");function a(a){a=c("useIsRouteActive")("comet.marketplace.live_shopping");return j.jsx(c("CometMarketplaceNavLink.react"),{icon:d("fbicon")._(i("682729"),20),isActive:a,title:h._(/*FBT_CALL*/["Live shopping","feb3bc15dfc4784779be485e1751f7ac"]/*FBT_CALL*/),url:c("XCometMarketplaceLiveShoppingControllerRouteBuilder").buildURL({})})}a.displayName=a.name+" [from "+f.id+"]";g["default"]=a}),98);

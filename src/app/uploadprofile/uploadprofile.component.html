@@ -1,0 +1,31 @@
+<div class="alert alert-success">
+    <h2></h2>
+</div>
+<div class="alert alert-secondary">
+    <h3>Upload Product Image</h3>
+    <form >
+        <div class="form-group">
+            <div class=”custom-file”>
+                <input type="file" class="custom-file-input" required formControlName="files"
+                     />
+
+            </div>
+            <div class=progress”>
+                <!-- <div class="progress-bar" role="progressbar" style="width: {{progress}}%"
+                    [attr.aria-valuenow]="progress" aria-valuemin="0" aria-valuemax="100">{{progress}}
+                </div> -->
+            </div>
+        </div>
+        <div style="margin-top: 10px;">
+            <button class="btn btn-outline-primary" type="submit">POST</button>
+        </div>
+    </form>
+    <div class="card-group">
+        <div class="card m-3" >
+            <img>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+                <button class="btn btn-sm p-0 btn-secondary" >X</button>
+            </span>
+        </div>
+    </div>
+</div>

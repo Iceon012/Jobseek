@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title" *ngFor="let u of user">{{u.name}}</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Edit Profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th class="text-center">#</th>
+              <th>Name</th>
+              <th>Birthdate</th>
+              <th>Gender</th>
+              <th>Address</th>
+              <th>Contact</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <tr class="justify-content-md-center" *ngFor="let e of employer">
+              <td >{{e.id_no}}</td>
+              <td>{{e.Name}}</td>
+              <td>{{e.bdate}}</td>
+              <td>{{e.gender}}</td>
+              <td>{{e.address}}</td>
+              <td>{{e.contact}}</td>
+              <td class="text-center">
+                <div>
+                  <!-- <a><i class="fa fa-eye fa-lg" aria-hidden="true" (click)="displayFunct(e.id_no)"></i></a> -->
+                  <a [routerLink]="['/admin/update',e.id_no]"><i
+                        class="fa fa-pencil-square-o fa-lg text-dark" aria-hidden="true" style="margin-left: 15px;"></i></a>
+                  <i class="fa fa-trash-o fa-lg" aria-hidden="true"
+                    style="margin-left: 15px;"></i>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

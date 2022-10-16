@@ -1,0 +1,54 @@
+<div class="container">
+    <form [formGroup]="jobForm" (ngSubmit)="SaveJobs()">
+        <div class="row">
+            <div class="col-md text-center">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" formControlName="empid" id="floatingInput" *ngFor="let emp of employerdata" value="{{emp.id_no}}">
+                    <label for="floatingInput">EMPLOYER ID:</label>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" formControlName="jTitle" placeholder="Leave a comment here"
+                        id="floatingTextarea2" style="height: 70px"></textarea>
+                    <label for="floatingTextarea2">Job Title</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <select class="form-select mb-3 rounded-4" aria-label="Default select example" formControlName="jType">
+                    <option *ngFor="let titem of jobType">{{titem}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <select class="form-select mb-3 rounded-4" aria-label="Default select example" formControlName="jcat">
+                    <option *ngFor="let titem of jobCategory">{{titem}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" formControlName="jSalary" id="floatingInput"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Job Salary ($20,000)</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" formControlName="jobDesc" placeholder="Leave a comment here"
+                        id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Job Description</label>
+                </div>
+            </div>
+        </div>
+    </form>

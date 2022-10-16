@@ -1,0 +1,68 @@
+<br>
+<div class="container">
+    <br>
+    <div class="container">
+        <h1 class="display-4" style="font-weight: 900;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> UPDATE JOB</h1>
+    </div>
+    <br>
+    <form [formGroup]="ujobForm" (ngSubmit)="onUpdate()">
+        <div class="row" *ngIf="divupdate">
+            <div class="col-md">
+                <h4 class="alert alert-success"><i class="fa fa-check-square-o" aria-hidden="true"></i> Update Successfully</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input type="email" formControlName="ujTitle" class="form-control rounded-4"
+                        id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Job Title</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <select class="form-select mb-3 rounded-4" aria-label="Default select example" formControlName="ujType">
+                    <option *ngFor="let titem of ujobType">{{titem}}</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <select class="form-select mb-3 rounded-4" aria-label="Default select example" formControlName="ujLevel">
+                    <option *ngFor="let titem of ujobCategory">{{titem}}</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+              <div class="form-floating mb-2">
+                  <input type="email" formControlName="ujSalary" class="form-control rounded-4"
+                      id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Job Salary</label>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md">
+            <div class="form-floating mb-2">
+                <textarea class="form-control" formControlName="ujDesc" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Job Description</label>
+              </div>
+          </div>
+      </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-md">
+                <button type="submit" class="btn btn-outline-primary form-control" style="font-weight: 600;">UPDATE</button>
+            </div>
+            <div class="col-md">
+                <a style="text-decoration: none; font-weight: 600;" class="btn btn-outline-primary form-control" routerLink="/employer" ><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> BACK</a>
+            </div>
+        </div>
+        <!---<div class="alert alert-success">
+    <h3><b>Successful</b></h3>
+    <p><b>|</b> Already Signup</p>
+    </div>--->
+    </form>
+</div>

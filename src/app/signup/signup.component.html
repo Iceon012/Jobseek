@@ -1,0 +1,123 @@
+<div class="container-fluid bg-info">
+<br><br>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <img src="/assets/jobseek.svg" width="500" height="600" alt="" srcset="" style="margin-bottom: 2rem;">
+        </div>
+        <div class="col-md-6">
+            <div class="container py-3">
+                <div class="container text-center text-info py-3" style="border-radius: 1rem;">
+                    <h1 href="#" style="font-weight: 800;"><i class="fa fa-user-plus" aria-hidden="true"></i> REGISTRATION</h1>
+                </div>
+                    <div class="alert alert-success text-center" *ngIf="divshowsuccess">
+                        <h5>
+                            <b><i class="fa fa-check-circle" aria-hidden="true"></i> Successfully Register! </b> Congatulations
+                        </h5>
+                    </div>
+
+
+                <form [formGroup]="signupForm" (ngSubmit)="SaveFunct()">
+                  <div class="row">
+                      <div class="col-md-5">
+                          <div class="form-floating mb-3">
+                              <input type="email" formControlName="lastname" class="form-control rounded-4"
+                                  id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">Last Name</label>
+                          </div>
+                      </div>
+                      <div class="col-md-5">
+                          <div class="form-floating mb-3">
+                              <input type="email" formControlName="firstname" class="form-control rounded-4"
+                                  id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">First Name</label>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <div class="form-floating mb-3">
+                              <input type="email" formControlName="middle" class="form-control rounded-4"
+                                  id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">MI.</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md">
+                          <div class="form-floating mb-2">
+                              <input type="date" formControlName="bdate" class="form-control rounded-4"
+                                  id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">Birthdate</label>
+                          </div>
+                      </div>
+                  </div>
+                  <a href=""></a>
+                  <div class="row">
+                      <label class="col-md-1" style="margin-right: 1rem;">Gender: </label>
+                      <div class="col-md">
+                          <div class="form-check-inline" *ngFor="let g of Gender">
+                              <input class="form-check-input" type="radio" name="gen" value="{{g}}"
+                                  formControlName="gen">
+                              <label class="form-check-label" for="gen" style="margin-left: 5px;">
+                                  {{g}}
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+                  <p></p>
+                  <div class="row">
+                      <div class="col-md">
+                          <div class="form-floating mb-3">
+                              <input type="email" formControlName="address" class="form-control rounded-4"
+                                  id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">(Street, Barangay, Town, Province)</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md">
+                          <div class="form-floating mb-2">
+                              <input type="number" formControlName="contact" class="form-control rounded-4"
+                                  id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput">Contact No.:</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md">
+                        <div class="form-floating mb-2">
+                            <input type="email" formControlName="email" class="form-control rounded-4"
+                                id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-floating mb-2">
+                            <input type="password" formControlName="password" class="form-control rounded-4"
+                                id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Password</label>
+                        </div>
+                    </div>
+                </div>
+                  <hr class="my-4">
+                  <div class="row">
+                      <div class="col-md">
+                          <button type="submit" class="btn btn-info text-white form-control" style="font-weight: 600;">SIGNUP</button>
+                      </div>
+                      <div class="col-md">
+                        <button type="button" class="btn btn-outline-info form-control" routerLink="/home"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                  </div>
+                  <!---<div class="alert alert-success">
+              <h3><b>Successful</b></h3>
+              <p><b>|</b> Already Signup</p>
+              </div>--->
+              </form>
+              </div>
+        </div>
+    </div>
+</div>

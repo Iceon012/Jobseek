@@ -1,0 +1,75 @@
+<head>
+  <style>
+    td {
+      font-family: monospace;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    th {
+      font-family: monospace;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<div class="container">
+  <h1 style="font-weight: 700; text-transform: uppercase;"><i class="fa fa-users" aria-hidden="true"></i> List of
+    Employers</h1>
+  <br>
+  <div class="row">
+    <div class="col-lg col-md-10 ml-auto mr-auto">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="table-dark rounded">
+            <tr>
+              <th class="text-center">#</th>
+              <th>Name</th>
+              <th>Birthdate</th>
+              <th>Gender</th>
+              <th>Address</th>
+              <th>Contact</th>
+              <th class="text-center">Actions</th>
+            </tr>
+          </thead>
+          <tbody data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <tr class="justify-content-md-center" *ngFor="let e of employer">
+              <td >{{e.id_no}}</td>
+              <td>{{e.Name}}</td>
+              <td>{{e.bdate}}</td>
+              <td>{{e.gender}}</td>
+              <td>{{e.address}}</td>
+              <td>{{e.contact}}</td>
+              <td class="text-center">
+                <div>
+                  <a><i class="fa fa-eye fa-lg" aria-hidden="true"[routerLink]="['/admin/jobs',e.id_no]"></i></a>
+                  <a [routerLink]="['/admin/update',e.id_no]"><i
+                        class="fa fa-pencil-square-o fa-lg text-dark" aria-hidden="true" style="margin-left: 15px;"></i></a>
+                  <i class="fa fa-trash-o fa-lg" aria-hidden="true"
+                    style="margin-left: 15px;" (click)="onConfirm(confirmModal, e.id_no, e.Name, e.gender)"></i>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #confirmModal let-modal>
+  <div class="modal-header text-center">
+     <h4 class="modal-title" id="confirm">Confirmation</h4>
+  </div>
+  <div class="modal-body">
+     <div class="alert alert-danger">
+        <h4><b>EMPLOYER ID: </b>{{id_no}}</h4>
+        <h4><b>EMPLOYER NAME:</b> {{Name}}</h4>  
+        <h4>Are you sure you want to delete?</h4> 
+     </div>
+  </div>
+  <div class="modal-footer">
+     <button type="button" class="btn btn-outline-dark" (click)="modal.close('1')">Ok</button>
+     <button type="button" class="btn btn-outline-dark" (click)="modal.close('0')">Cancel</button>
+  </div>
+</ng-template>

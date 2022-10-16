@@ -1,0 +1,6 @@
+if (self.CavalryLogger) { CavalryLogger.start_js_script(document.currentScript); }/*FB_PKG_DELIM*/
+
+__d("PagesCometAdminWhatsappUpsellDialogQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="4888825077892174"}),null);
+__d("PagesCometAdminWhatsappUpsellDialogQuery$Parameters",["PagesCometAdminWhatsappUpsellDialogQuery_facebookRelayOperation"],(function(a,b,c,d,e,f){"use strict";a={kind:"PreloadableConcreteRequest",params:{id:b("PagesCometAdminWhatsappUpsellDialogQuery_facebookRelayOperation"),metadata:{},name:"PagesCometAdminWhatsappUpsellDialogQuery",operationKind:"query",text:null}};e.exports=a}),null);
+__d("PagesCometAdminWhatsappUpsellDialog.entrypoint",["JSResourceForInteraction","PagesCometAdminWhatsappUpsellDialogQuery$Parameters"],(function(a,b,c,d,e,f,g){"use strict";a={getPreloadProps:function(a){return{queries:{dialogQueryReference:{parameters:c("PagesCometAdminWhatsappUpsellDialogQuery$Parameters"),variables:{pageID:a.pageID}}}}},root:c("JSResourceForInteraction")("PagesCometAdminWhatsappUpsellDialog.react").__setRef("PagesCometAdminWhatsappUpsellDialog.entrypoint")};g["default"]=a}),98);
+__d("PagesCometAdminWhatsAppPostingUpsellDialogQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="5923187917707973"}),null);

@@ -1,0 +1,110 @@
+<style>
+  i:hover{
+    background-color: #000000;
+    color: white;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      <h1 style="font-weight: 800; text-transform: uppercase;"><i class="fa fa-briefcase" aria-hidden="true"></i> Manage
+        Employer Jobs</h1>
+    </div>
+    <div class="col-md text-end justify-content-md-end">
+      <h3 style="font-weight: 800; text-transform: uppercase; padding-top: .5rem;" routerLink="/admin/employees"><i class="fa fa-arrow-circle-left fa-2x" aria-hidden="true"></i></h3>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 text-center">
+        <i class="fa fa-user fa-5x" style="font-size: 145px;"></i>
+    </div>
+    <div class="col-md">
+      <div class="card" *ngFor = "let e of emp">
+        <div class="card-body">
+          <h4 class="card-title">{{e.lname}}, {{e.fname}} {{e.middle}}.</h4>
+          <p class="card-text">
+            <b>Bithdate:</b> {{e.bdate}}
+            <br>
+            <b>Address:</b> {{e.address}}
+          </p>
+          <a href="#" class="btn btn-outline-dark">See Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <form class="row">
+    <div class="card-details col-md">
+      <div class="row">
+        <div class="table-responsive" style="width: 100%; height: 180px; overflow: auto;">
+          <table class="table table-hover">
+            <thead class="table-dark" style="opacity: 90%;">
+              <tr>
+                <th class="text-center">#</th>
+                <th>Job Title</th>
+                <th>Job Type</th>
+                <th>Job Level</th>
+                <th>Job Salary</th>
+                <th>Job Description</th>
+                <th>Job Status</th>
+                <th class="text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="justify-content-md-center" *ngFor = "let j of job">
+                <td >{{j.job_id}}</td>
+                <td>{{j.job_title}}</td>
+                <td>{{j.job_type}}</td>
+                <td>{{j.job_level}}</td>
+                <td>{{j.job_salary}}</td>
+                <td>{{j.job_description}}</td>
+                <td style="color: green;">{{j.jobs_status}}</td>
+                <td class="text-center">
+                  <div>
+                    <a ><i class="fa fa-check-circle fa-lg text-success" aria-hidden="true" (click)="onConfirm(confirmModal2, j.job_id, j.job_title)"></i></a>
+                    <a type="button"><i class="text-danger fa fa-times-circle fa-lg" aria-hidden="true"
+                      style="margin-left: 15px;" (click)="onConfirm(confirmModal, j.job_id, j.job_title)"></i></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <ng-template #confirmModal let-modal>
+    <div class="modal-header text-center">
+       <h4 class="modal-title" id="confirm">Delete</h4>
+    </div>
+    <div class="modal-body">
+       <div class="alert alert-danger">
+          <h4><b>EMPLOYER ID: </b>{{job_id}}</h4>
+          <h4>Are you sure you want to reject?</h4> 
+       </div>
+    </div>
+    <div class="modal-footer">
+       <button type="button" class="btn btn-outline-dark" (click)="modal.close('1')">Ok</button>
+       <button type="button" class="btn btn-outline-dark" (click)="modal.close('0')">Cancel</button>
+    </div>
+  </ng-template>
+
+  <ng-template #confirmModal2 let-modal>
+    <div class="modal-header text-center">
+       <h4 class="modal-title" id="confirm">Delete</h4>
+    </div>
+    <div class="modal-body">
+       <div class="alert alert-success">
+          <h4><b>EMPLOYER ID: </b>{{job_id}}</h4>
+          <h4>Are you sure you want to Accept?</h4> 
+       </div>
+    </div>
+    <div class="modal-footer">
+       <button type="button" class="btn btn-outline-dark" (click)="modal.close('3')">Ok</button>
+       <button type="button" class="btn btn-outline-dark" (click)="modal.close('0')">Cancel</button>
+    </div>
+  </ng-template>

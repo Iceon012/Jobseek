@@ -1,0 +1,40 @@
+<body>
+<div class="container">
+  <div>
+    <p></p>
+  </div>
+</div>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg shadow fixed-top" style="background-color: rgb(255, 255, 255);">
+  <div class="container">
+    <a class="navbar-brand text-info" href="#"><h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: 900;"><i class="fa fa-search" aria-hidden="true"></i> JOBSEEK.COM</h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-info" aria-current="page" href="#" style="font-weight:600;" routerLink="/home">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-info" href="#" style="font-weight:600;" routerLink="/home/viewjobs" >VIEW JOBS</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-info text-white" style="font-weight: 900; border-radius: 5rem;" routerLink="/signup">FOR EMPLOYER</button>
+      </form>
+    </div>
+  </div>
+  </nav>
+  <div class="container-fluid bg-info px-4 px-lg-5" style="padding-top: 6rem;">
+    <div class="row">
+      <form class="col-lg d-flex">
+        <input class="form-control me-2" type="search" aria-label="Search">
+        <button class="btn btn-outline-light btn-lg" type="submit">Search</button>
+      </form>
+    </div>
+
+    <br>
+  </div>
+  <router-outlet></router-outlet>
+</body>
